@@ -1,0 +1,18 @@
+<div class="form-group">
+  <table ng-if="foundItems.length > 0">
+    <thead>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Action</th>
+    </thead>
+  <tr ng-repeat="item in foundItems">
+    <td>{{item.short_name}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.description}}</td>
+    <td>
+      <button ng-click="onRemove({index: $index})">Don't want this one!</button>
+    </td>
+  </tr>
+  </table>
+</div>
